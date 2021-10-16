@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+    crossorigin="anonymous">
+    <style>
+        .nav{
+            background-color: #0C3C26;
+            border-bottom: 5px solid #44B78B;
+            border-right: 5px solid #44B78B;
+        }
+        .nav-link{
+            color: white;
+        }
+        .main{
+            margin-top: 50px;
+            color: #0C3C26;
+        }
+        li{
+            margin-bottom: 2px;
+        }
+        .img{
+        height: 300px;
+        width: 300px;
+        margin-bottom: 5px;
+        }
+        .pics{
+        margin-bottom: 25px;
+        }
+        .navbar{
+        margin-bottom: 25px;
+        }
+    </style>
+    <title>What We Do</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="navabar">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Estrada & Associates Construction</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/request_a_quote">Request a Quote</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/other_projects">What We Do</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact_us" tabindex="-1" aria-disabled="true">Contact Us</a>
+                </li>
+            </ul>
+            </div>
+        <div class="main">
+            <h1>What We Do:</h1><br>
+            <ul>
+                <li>Interior and Exterior Remodels</li>
+                <li>Kitchen And Restroom Remodels</li>
+                <li>Drywall</li>
+                <li>Concrete</li>
+                <li>Flooring</li>
+                <li>New Construction</li>
+                <li>Fences</li>
+                <li>Framing</li>
+                <li>Driveways</li>
+                <li>Tiling</li>
+            </ul>
+        </div>
+        <div class="pics">
+            <img class= "img" class="rounded mx-auto d-block" src="{{ url_for('static', filename='img/kitchen1.JPG') }}">
+            <img class= "img" class="rounded mx-auto d-block" src="{{ url_for('static', filename='img/kitchen2.JPG') }}">
+            <img class= "img" class="rounded mx-auto d-block" src="{{ url_for('static', filename='img/kitchen3.JPG') }}">
+            <img class= "img" class="rounded mx-auto d-block" src="{{ url_for('static', filename='img/backyard2.JPG') }}">
+            <img class= "img" class="rounded mx-auto d-block" src="{{ url_for('static', filename='img/bathroom_sink.JPG') }}">  
+            <img class= "img" class="rounded mx-auto d-block" src="{{ url_for('static', filename='img/bthrm_shower2.JPG') }}">
+            <img class= "img" class="rounded mx-auto d-block" src="{{ url_for('static', filename='img/bthrm_bathtub.JPG') }}">
+            <img class= "img" class="rounded mx-auto d-block" src="{{ url_for('static', filename='img/kitchen4.JPG') }}">  
+            <img class= "img" class="rounded mx-auto d-block" src="{{ url_for('static', filename='img/bthrm_shower3.JPG') }}">
+        </div>
+    </div>
+    
+</body>
+</html>

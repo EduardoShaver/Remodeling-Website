@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrada & Associates Construction</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+crossorigin="anonymous">
+
+<style>
+    .container{
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    }
+    .nav{
+        background-color: #0C3C26;
+        border-bottom: 5px solid #44B78B;
+        border-right: 5px solid #44B78B;
+    }
+    .nav-link{
+        color: white;
+        
+    }
+    .img2{
+        height: 200px;
+        width: 395px;
+        margin-right: 5px;
+        align-content: center;
+
+    }
+    .img1{
+        height: 200px;
+        width: 345px;
+        margin-right: 5px;
+        align-content: center;
+    }
+    .pics{
+        margin-bottom: 15px;
+    }
+    .navbar{
+        margin-bottom: 25px;
+    }
+    .btn{
+            background-color: #44B78B;
+            color: white;
+            border: white;
+        }
+    h1, p{
+        color: #0C3C26;
+    }
+    
+</style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="navbar">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Estrada & Associates Construction</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/request_a_quote">Request a Quote</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/other_projects">What We Do</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/contact_us" tabindex="-1" aria-disabled="true">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/admin" tabindex="-1" aria-disabled="true">Admin</a>
+            </li>
+        </ul>
+        </div>
+        <div class="pics">
+            <img class= "img1" src="{{ url_for('static', filename='img/bthrm_combo.jpeg') }}">
+            <img class= "img2" src="{{ url_for('static', filename='img/bthrm_after.JPG') }}">
+        </div>
+        <div class="pics">
+            <img class= "img2" src="{{ url_for('static', filename='img/flooring1.JPG') }}">
+            <img class= "img1" src="{{ url_for('static', filename='img/test.jpeg') }}">
+        </div>
+        <div class="pics">
+            <img class= "img1" src="{{ url_for('static', filename='img/bthrm_shower.jpeg') }}">
+            <img class= "img2" src="{{ url_for('static', filename='img/bthrm_tub.jpeg') }}">
+        </div>
+        <div class="pics">
+            <img class= "img2" src="{{ url_for('static', filename='img/bthrm_shower1.JPG') }}">
+            <img class= "img1" src="{{ url_for('static', filename='img/roof.JPG') }}">
+        </div>
+        <div class="pics">
+            <img class= "img1" src="{{ url_for('static', filename='img/flooring7.JPG') }}">
+            <img class= "img2" src="{{ url_for('static', filename='img/kitchen5.JPG') }}">
+        </div>
+        <div class="right">
+            <br>
+            <h1>Login</h1>
+            <form action="/login" method="POST">
+                <p>Email:
+                    <input type="text" name="email" id="">
+                </p>
+                <p>Password:
+                    <input type="password" name="password" id="">
+                </p>
+                <button class="btn btn-primary" >Login</button>
+            </form>
+            
+        </div>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p class="text-danger">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+    
+</body>
+</html>
